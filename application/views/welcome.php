@@ -116,7 +116,7 @@
 						?>
 						<tr>
 							<td><?php
-								echo $item_name;
+								echo substr($item_name, (strpos($item_name, ':') ?: -1)+1);
 								if($check){
 									$alert = true;
 									echo '<span class="pull-right"><a href="'.site_url('/control/clear/'.$name.'/'.$item_name).'" id="'.$name.'_'.$item_name.
